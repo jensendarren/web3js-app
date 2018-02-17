@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Web3js example</title>
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="./index.js"></script>
+</head>
+<body class="container">
+    <h1>Interact with a wallet balance</h1>
+
+    <button onclick="getBalance()">Get my balance</button>
+    <span id="myBalance"></span> in Ether.
+
+    <hr/>
+
+    <h1>Interact with a contract</h1>
+
+
+<button onclick="getPreviouslyDeployedContract()">Attach to existing contract</button>
+
+<button onclick="getCounter()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Get Counter</button>
+<button onclick="increaseCounter()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Increase Counter</button>
+<button onclick="watchEvents()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Watch Event</button>
+<button onclick="stopWatchingEvents()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Stop Watching Event</button>
+<button onclick="getAllEvents()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Get All Event</button>
+<button onclick="getNumberIsIncreasedEvent()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Get NumberIsIncreased Event</button>
+<button onclick="filterEventsWatch()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Filter Events Watch</button>
+<button onclick="stopFilterEventsWatch()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Stop Filter Events Watch</button>
+<button onclick="filterEventsGet()" class="buttonVisibleWhenInstanceAvailable" style="visibility: hidden">Filter Events Get</button>
+
+<br>
+<br>
+
+Counter Value for current contract: <span id="myCounter"></span>
+
+<br />
+<br />
+<h2>Events:</h2>
+<div id="events"></div>
+
+</body>
+</html>
